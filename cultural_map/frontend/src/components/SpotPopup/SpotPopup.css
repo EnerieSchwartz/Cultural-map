@@ -1,0 +1,90 @@
+/* Base popup styling */
+.maplibregl-popup-content {
+  font-family: 'Segoe UI', sans-serif;
+  font-size: 14px;
+  line-height: 1.5;
+  background: #fff;
+  border-radius: 6px;
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      min-width: 300px;
+    max-width: 350px;
+  word-wrap: break-word;
+}
+
+/* Title container */
+.popup-title-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 12px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #eaeaea;
+}
+
+.popup-title {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 600;
+  color: #333;
+  flex: 1;
+}
+
+/* Grid layout for labels and values */
+.popup-grid {
+  display: grid;
+  grid-template-columns: 100px 1fr;
+  gap: 8px 10px;
+  align-items: baseline;
+}
+
+.popup-label {
+  font-weight: 600;
+  color: #555;
+}
+
+.popup-value {
+  color: #333;
+  word-break: break-word;
+  text-transform: capitalize;
+  outline: none;
+}
+.popup-value-website{
+  text-transform: lowercase;
+}
+
+.popup-value a {
+  color: #4B93CF;
+  text-decoration: none;
+}
+
+.popup-value a:hover {
+  text-decoration: underline;
+}
+
+/* Hide our custom close button */
+.popup-close {
+  display: none;
+}
+
+/* Style the default MapLibre close button */
+.maplibregl-popup-close-button {
+  font-size: 24px;
+  line-height: 1;
+  width: 28px;
+  height: 28px;
+  padding: 0;
+  background: none;
+  border: 1px solid #c4c4c4;
+  cursor: pointer;
+  color: #666;
+  border-radius: 50%;
+  transition: background-color 0.2s;
+  top: 20px;
+  right: 20px;
+}
+
+.maplibregl-popup-close-button:hover {
+  background-color: #f0f0f0;
+  color: #333;
+  border: none;
+}

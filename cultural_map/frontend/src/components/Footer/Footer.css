@@ -1,0 +1,28 @@
+.map-footer {
+  width: 100%;
+  padding: 10px 20px;
+  margin-left: 40px;
+  background-color: #ffffff;
+  font-size: 14px;
+  color: #5b5e6e;
+  /* border-top: 1px solid #e0e0e0; */
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 10;
+
+  text-align: left;
+}
+
+.map-footer,
+.map-footer a {
+  font-size: 14px;
+  font-weight: 500;
+  color: #5b5e6e;
+}
+
+
+.map-footer:hover,
+.map-footer a:hover {
+  color: #4a4c5a;
+}
