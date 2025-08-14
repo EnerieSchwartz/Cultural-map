@@ -1,15 +1,17 @@
-import React from 'react';
-import './SettingsPopup.css';
-import MapViewOptions from '../MapViewOptions/MapViewOptions';
-import SpotFilters from '../SpotFilters/SpotFilters';
-import GeneralSettings from '../GeneralSettings/GeneralSettings';
+import React, { useState, useContext } from "react";
+import "./SettingsPopup.css";
+import MapViewOptions from "../MapViewOptions/MapViewOptions";
+import SpotFilters from "../SpotFilters/SpotFilters";
+import GeneralSettings from "../GeneralSettings/GeneralSettings";
 
 export default function SettingsPopup({ onClose, onStyleChange }) {
   return (
     <div className="settings-popup">
       <div className="settings-header">
         <h3>Settings</h3>
-        <button className="settings-close" onClick={onClose}>✕</button>
+        <button className="settings-close" onClick={onClose}>
+          ✕
+        </button>
       </div>
       <div className="settings-section">
         <h4>Map view</h4>

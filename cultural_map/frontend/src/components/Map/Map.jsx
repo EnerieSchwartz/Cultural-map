@@ -6,6 +6,7 @@ import SpotMarkers from "../SpotMarkers/SpotMarkers";
 import Sidebar from "../Sidebar/Sidebar";
 import SettingsPopup from "../SettingsPopup/SettingsPopup";
 import { FaSlidersH } from "react-icons/fa";
+import { FiltersContext } from "./../../contexts/FiltersContext.js";
 
 export default function Map({ mapRef }) {
   const mapContainer = useRef(null);
@@ -13,6 +14,16 @@ export default function Map({ mapRef }) {
   const [geojsonData, setGeojsonData] = useState(null);
   const [showSettings, setShowSettings] = useState(false);
   const [mapStyle, setMapStyle] = useState(maptilersdk.MapStyle.STREETS);
+
+  const [filters, setFilters] = useState({
+    monument: true,
+    religious: true,
+    palace: true,
+    museum: true,
+    memorial: true,
+    square: true,
+    bridge: true,
+  });
 
   const franceBounds = [
     [-4.710033934989174, 48.35442617029091],
@@ -56,29 +67,32 @@ export default function Map({ mapRef }) {
       satellite: maptilersdk.MapStyle.SATELLITE,
     };
     setMapStyle(styleMap[styleKey] || maptilersdk.MapStyle.STREETS);
-    // Removed setShowSettings(false) to keep popup open after style change
   };
 
   return (
     <div className="map-wrap">
       <div ref={mapContainer} className="map" />
+      <FiltersContext.Provider value={{ filters, setFilters }}>
+        <Sidebar>
+          <button
+            className="filter-toggle"
+            onClick={() => setShowSettings(true)}
+          >
+            <FaSlidersH />
+          </button>
 
-      <Sidebar>
-        <button className="filter-toggle" onClick={() => setShowSettings(true)}>
-          <FaSlidersH />
-        </button>
+          {showSettings && (
+            <SettingsPopup
+              onClose={() => setShowSettings(false)}
+              onStyleChange={handleStyleChange}
+            />
+          )}
+        </Sidebar>
 
-        {showSettings && (
-          <SettingsPopup
-            onClose={() => setShowSettings(false)}
-            onStyleChange={handleStyleChange}
-          />
+        {map.current && geojsonData && (
+          <SpotMarkers map={map.current} geojson={geojsonData} />
         )}
-      </Sidebar>
-
-      {map.current && geojsonData && (
-        <SpotMarkers map={map.current} geojson={geojsonData} />
-      )}
+      </FiltersContext.Provider>
     </div>
   );
 }
