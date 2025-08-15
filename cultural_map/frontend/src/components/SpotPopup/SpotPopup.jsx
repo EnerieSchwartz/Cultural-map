@@ -1,14 +1,14 @@
-import React from "react";
+import { useContext } from "react";
 import "./SpotPopup.css";
-
-export default function SpotPopup({ spot }) {
+// import { ThemeContext } from "./../../contexts/ThemeContext";
+export default function SpotPopup({ spot, darkMode, theme }) {
   const { name, description, address, website } = spot;
+  // const { darkMode, toggleDarkMode, theme } = useContext(ThemeContext);
 
   return (
     <div>
       <div className="popup-title-container">
         <h3 className="popup-title">Spot Details</h3>
-        {/* Removing our custom close button */}
       </div>
 
       <div className="popup-grid">

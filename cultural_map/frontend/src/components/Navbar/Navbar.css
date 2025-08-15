@@ -1,7 +1,14 @@
+.navbar.dark {
+  background-color: var(--darkBg);
+  color: var(--darkText);
+}
+.navbar.light {
+  background-color: var(--lightBg);
+  /* color: var(--lightText); */
+}
 .navbar {
-  background-color: #ffffff;
-  padding: 10px 20px;
-  margin-left: 40px;
+  background-color: inherit;
+  padding: 10px 20px 10px 50px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
   z-index: 10;
 }
@@ -14,8 +21,13 @@
   margin: 0 auto;
 }
 
-.navbar-logo {
+.navbar.light > .navbar-wrapper > .navbar-logo,
+.navbar.light > .navbar-wrapper > .geo-search-area > .geo-search-icon {
   color: #5b5e6e;
+}
+.navbar.dark > .navbar-wrapper > .navbar-logo,
+.navbar.dark > .navbar-wrapper > .geo-search-area > .geo-search-icon {
+  color: inherit;
 }
 
 /* Search section */
@@ -26,12 +38,15 @@
 }
 
 .geo-search-icon {
-  font-size: 1rem; /*Smaller icon */
+  font-size: 1rem; 
   cursor: pointer;
-  color: #5b5e6e;
+  /* color: #5b5e6e; */
 }
-.geo-search-icon:hover {
+.navbar.light > .navbar-wrapper > .geo-search-area > .geo-search-icon:hover {
   color: #4a4c5a;
+}
+.navbar.dark > .navbar-wrapper > .geo-search-area > .geo-search-icon:hover {
+  color: #a1a1a1;
 }
 .geo-search-form {
   position: relative;
@@ -49,7 +64,8 @@
   opacity: 1;
   transform: scale(1);
   outline: none;
-  color: #888;
+  /* color: #888; */
+  color: #5c5b5b;
 }
 
 .geo-search-input-hidden {
@@ -60,8 +76,8 @@
 }
 
 .geo-search-input:focus {
-  border-color: #6f6e6e; /* Optional: subtle focus color */
-  box-shadow: 0 0 4px rgba(0, 0, 0, 0.1); /* Optional: subtle shadow */
+  border-color: #6f6e6e;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.1);
   outline: none;
   opacity: 1;
   transform: scale(1);

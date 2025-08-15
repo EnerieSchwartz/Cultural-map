@@ -1,10 +1,18 @@
+.map-footer.light {
+  color: #5b5e6e;
+  background-color: var(--lightBg);
+}
+.map-footer.dark {
+  color: var(--darkText);
+  background-color: var(--darkBg);
+}
 .map-footer {
   width: 100%;
   padding: 10px 20px;
   margin-left: 40px;
-  background-color: #ffffff;
+  /* background-color: #ffffff; */
   font-size: 14px;
-  color: #5b5e6e;
+  /* color: #5b5e6e; */
   /* border-top: 1px solid #e0e0e0; */
   position: fixed;
   bottom: 0;
@@ -18,11 +26,15 @@
 .map-footer a {
   font-size: 14px;
   font-weight: 500;
-  color: #5b5e6e;
+  color: inherit;
 }
 
-
-.map-footer:hover,
-.map-footer a:hover {
+.map-footer.light:hover,
+.map-footer.light a:hover {
   color: #4a4c5a;
+}
+
+.map-footer.dark:hover,
+.map-footer.dark a:hover {
+  color: #a1a1a1;
 }

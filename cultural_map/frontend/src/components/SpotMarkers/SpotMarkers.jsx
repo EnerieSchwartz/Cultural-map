@@ -7,9 +7,11 @@ import { GiCastle, GiGraveyard } from "react-icons/gi";
 import { MdOutlineMuseum, MdPark } from "react-icons/md";
 import "./SpotMarkers.css";
 import { FiltersContext } from "./../../contexts/FiltersContext.js";
+import { ThemeContext } from "./../../contexts/ThemeContext";
 
 export default function SpotMarkers({ map, geojson }) {
   const { filters, setFilters } = useContext(FiltersContext);
+  const { darkMode, toggleDarkMode, theme } = useContext(ThemeContext);
   useEffect(() => {
     if (!map || !geojson) return;
 
@@ -21,11 +23,11 @@ export default function SpotMarkers({ map, geojson }) {
       if (!filters[spot.category]) return;
       const markerElement = createCategoryMarker(spot.category);
       const popupContent = ReactDOMServer.renderToString(
-        <SpotPopup spot={spot} />
+        <SpotPopup spot={spot} theme={theme} darkMode={darkMode} />
       );
       const popup = new maplibregl.Popup({
         offset: 20,
-        className: "spot-details-popup",
+        className: `${theme === "light" ? "light" : "dark"} spot-popup`,
       }).setHTML(popupContent);
 
       const marker = new maplibregl.Marker({ element: markerElement })
@@ -39,7 +41,7 @@ export default function SpotMarkers({ map, geojson }) {
     return () => {
       markers.forEach((marker) => marker.remove());
     };
-  }, [map, geojson, filters]);
+  }, [map, geojson, filters, theme]);
 
   return null;
 }

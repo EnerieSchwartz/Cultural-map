@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from "react";
+import React, { useState, useRef, useEffect, useContext } from "react";
 import * as maptilersdk from "@maptiler/sdk";
 import "@maptiler/sdk/dist/maptiler-sdk.css";
 import "./Map.css";
@@ -7,6 +7,7 @@ import Sidebar from "../Sidebar/Sidebar";
 import SettingsPopup from "../SettingsPopup/SettingsPopup";
 import { FaSlidersH } from "react-icons/fa";
 import { FiltersContext } from "./../../contexts/FiltersContext.js";
+// import { ThemeContext } from "./../../contexts/ThemeContext";
 
 export default function Map({ mapRef }) {
   const mapContainer = useRef(null);
@@ -14,6 +15,8 @@ export default function Map({ mapRef }) {
   const [geojsonData, setGeojsonData] = useState(null);
   const [showSettings, setShowSettings] = useState(false);
   const [mapStyle, setMapStyle] = useState(maptilersdk.MapStyle.STREETS);
+
+  // const { darkMode, toggleDarkMode, theme } = useContext(ThemeContext);
 
   const [filters, setFilters] = useState({
     monument: true,

@@ -3,6 +3,7 @@ import Navbar from "./components/Navbar/Navbar";
 import Footer from "./components/Footer/Footer";
 import Map from "./components/Map/Map";
 import { useRef } from "react";
+import { ThemeProvider } from "./contexts/ThemeContext";
 
 function App() {
   const mapRef = useRef(null);
@@ -28,11 +29,13 @@ function App() {
 
   return (
     <div className="app-container">
-      <Navbar onSearch={handleSearch} />
-      <div className="map-container">
-        <Map mapRef={mapRef} />
-      </div>
-      <Footer />
+      <ThemeProvider>
+        <Navbar onSearch={handleSearch} />
+        <div className="map-container">
+          <Map mapRef={mapRef} />
+        </div>
+        <Footer />
+      </ThemeProvider>
     </div>
   );
 }

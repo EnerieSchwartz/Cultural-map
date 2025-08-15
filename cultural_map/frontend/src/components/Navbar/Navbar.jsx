@@ -1,11 +1,12 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
 import "./Navbar.css";
-import Logo from "./../../assets/logo/logo.svg";
 import { FaSearch } from "react-icons/fa";
+import { ThemeContext } from "./../../contexts/ThemeContext";
 
 const MAPTILER_API_KEY = import.meta.env.VITE_MAPTILER_API_KEY;
 
 export default function Navbar({ onSearch }) {
+  const { darkMode, toggleDarkMode, theme } = useContext(ThemeContext);
   const [query, setQuery] = useState("");
   const [showInput, setShowInput] = useState(false);
   const [suggestions, setSuggestions] = useState([]);
@@ -50,7 +51,7 @@ export default function Navbar({ onSearch }) {
   }, [query]);
 
   return (
-    <nav className="navbar">
+    <nav className={`${theme === "light" ? "light" : "dark"} navbar`}>
       <div className="navbar-wrapper">
         <h3 className="navbar-logo">L’Atlas Parisien</h3>
 

@@ -4,8 +4,11 @@ import { FaLandmark, FaMonument, FaChurch, FaCity } from "react-icons/fa";
 import { GiCastle, GiGraveyard, GiStoneBridge } from "react-icons/gi";
 import { MdOutlineMuseum, MdPark } from "react-icons/md";
 import { FiltersContext } from "./../../contexts/FiltersContext.js";
+import { ThemeContext } from "./../../contexts/ThemeContext";
 
 export default function SpotFilters() {
+  const { darkMode, toggleDarkMode, theme } = useContext(ThemeContext);
+
   const handleToggle = (type) => {
     setFilters((prev) => ({
       ...prev,
@@ -13,7 +16,6 @@ export default function SpotFilters() {
     }));
   };
   const { filters, setFilters } = useContext(FiltersContext);
-  console.log("filters in popup:" + filters);
 
   const hideAll = () => {
     setFilters({
@@ -28,7 +30,7 @@ export default function SpotFilters() {
   };
 
   return (
-    <div className="supplier-filters">
+    <div className={`${theme === "light" ? "light" : "dark"} spots-filters`}>
       <div className="filters-header">
         <h4>Map markers</h4>
         <button className="hide-all-btn" onClick={hideAll}>

@@ -1,22 +1,23 @@
-// src/components/GeneralSettings/GeneralSettings.jsx
-import React from 'react';
-import { FaMoon } from 'react-icons/fa';
-import './GeneralSettings.css';
+import { useContext } from "react";
+import { FaMoon } from "react-icons/fa";
+import "./GeneralSettings.css";
+import { ThemeContext } from "./../../contexts/ThemeContext";
 
 export default function GeneralSettings() {
+  const { darkMode, toggleDarkMode, theme } = useContext(ThemeContext);
+
   return (
-    <div className="general-settings">
+    <div className={`general-settings`}>
       <div className="settings-row">
-        <div className="settings-left">
+        <div className={`${theme === "light" ? "" : "dark"} settings-theme`}>
           <FaMoon className="settings-icon" />
-          <span className="settings-label">Dark theme</span>
+          <span className={`settings-label`}>Dark theme</span>
         </div>
 
-        <div className="toggle-switch">
-          <div className="toggle-track">
-            <div className="toggle-thumb" />
-          </div>
-        </div>
+        <label className="toggle-switch">
+          <input type="checkbox" checked={darkMode} onChange={toggleDarkMode} />
+          <span className="toggle-slider"></span>
+        </label>
       </div>
     </div>
   );

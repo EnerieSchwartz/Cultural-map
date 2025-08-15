@@ -3,10 +3,13 @@ import "./SettingsPopup.css";
 import MapViewOptions from "../MapViewOptions/MapViewOptions";
 import SpotFilters from "../SpotFilters/SpotFilters";
 import GeneralSettings from "../GeneralSettings/GeneralSettings";
+import { ThemeContext } from "./../../contexts/ThemeContext";
 
 export default function SettingsPopup({ onClose, onStyleChange }) {
+  const { darkMode, toggleDarkMode, theme } = useContext(ThemeContext);
+
   return (
-    <div className="settings-popup">
+    <div className={`${theme === "light" ? "light" : "dark"} settings-popup`}>
       <div className="settings-header">
         <h3>Settings</h3>
         <button className="settings-close" onClick={onClose}>

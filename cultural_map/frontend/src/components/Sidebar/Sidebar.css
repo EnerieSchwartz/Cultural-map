@@ -3,22 +3,33 @@
   top: 0px;
   left: 0px;
   z-index: 100;
-  background-color: white;
   width: 50px;
   height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
 }
-
+.sidebar.light {
+  color: var(--lightText);
+  background-color: var(--lightBg);
+}
+.sidebar.dark {
+  color: var(--darkText);
+  background-color: var(--darkBg);
+}
 .filter-toggle {
   background-color: transparent;
-  color: #5b5e6e;
+  /* color: #5b5e6e; */
+  color: inherit;
   border: none;
   cursor: pointer;
   font-size: 16px;
 }
 
-.filter-toggle:hover {
-    color: #4a4c5a;
+.sidebar.light > .filter-toggle:hover {
+  /* color: #4a4c5a; */
+  color: #202020;
+}
+.sidebar.dark > .filter-toggle:hover {
+  color: #a1a1a1;
 }

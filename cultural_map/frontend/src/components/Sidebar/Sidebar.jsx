@@ -1,6 +1,12 @@
-import React from 'react';
-import './Sidebar.css';
+import { useContext } from "react";
+import "./Sidebar.css";
+import { ThemeContext } from "./../../contexts/ThemeContext";
 
 export default function Sidebar({ children }) {
-  return <aside className="sidebar">{children}</aside>;
+  const { darkMode, toggleDarkMode, theme } = useContext(ThemeContext);
+  return (
+    <aside className={`${theme === "light" ? "light" : "dark"} sidebar`}>
+      {children}
+    </aside>
+  );
 }

@@ -1,17 +1,24 @@
-/* Base popup styling */
 .maplibregl-popup-content {
-  font-family: 'Segoe UI', sans-serif;
+  font-family: "Segoe UI", sans-serif;
   font-size: 14px;
   line-height: 1.5;
-  background: #fff;
+  /* background: #fff; */
   border-radius: 6px;
   padding: 20px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-      min-width: 300px;
-    max-width: 350px;
+  min-width: 300px;
+  max-width: 350px;
   word-wrap: break-word;
 }
 
+.spot-popup.light > .maplibregl-popup-content {
+  color: #5b5e6e;
+  background-color: var(--lightBg);
+}
+.spot-popup.dark > .maplibregl-popup-content {
+  color: var(--darkText);
+  background-color: var(--darkBg);
+}
 /* Title container */
 .popup-title-container {
   display: flex;
@@ -25,7 +32,8 @@
   margin: 0;
   font-size: 18px;
   font-weight: 600;
-  color: #333;
+  /* color: #333; */
+  color: inherit;
   flex: 1;
 }
 
@@ -36,24 +44,29 @@
   gap: 8px 10px;
   align-items: baseline;
 }
-
+.spot-popup.light > .maplibregl-popup-content > .popup-grid > .popup-label {
+  color: #555;
+}
+.spot-popup.dark > .maplibregl-popup-content > .popup-grid > .popup-label {
+  color: #a1a1a1;
+}
 .popup-label {
   font-weight: 600;
-  color: #555;
 }
 
 .popup-value {
-  color: #333;
+  /* color: #333; */
+  color: inherit;
   word-break: break-word;
   text-transform: capitalize;
   outline: none;
 }
-.popup-value-website{
+.popup-value-website {
   text-transform: lowercase;
 }
 
 .popup-value a {
-  color: #4B93CF;
+  color: #4b93cf;
   text-decoration: none;
 }
 
@@ -61,12 +74,10 @@
   text-decoration: underline;
 }
 
-/* Hide our custom close button */
 .popup-close {
   display: none;
 }
 
-/* Style the default MapLibre close button */
 .maplibregl-popup-close-button {
   font-size: 24px;
   line-height: 1;
@@ -84,7 +95,8 @@
 }
 
 .maplibregl-popup-close-button:hover {
-  background-color: #f0f0f0;
-  color: #333;
+  /* background-color: #f0f0f0; */
+  /* color: #333; */
+  color: inherit;
   border: none;
 }

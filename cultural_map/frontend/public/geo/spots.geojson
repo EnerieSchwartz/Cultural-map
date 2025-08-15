@@ -5,10 +5,7 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [
-          2.3483913391828537,
-          48.85349527412398
-        ]
+        "coordinates": [2.3483913391828537, 48.85349527412398]
       },
       "properties": {
         "id": 1,
@@ -25,10 +22,7 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [
-          2.342438778376163,
-          48.86051566225073
-        ]
+        "coordinates": [2.342438778376163, 48.86051566225073]
       },
       "properties": {
         "id": 2,
@@ -45,10 +39,7 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [
-          2.325283000000013,
-          48.860228
-        ]
+        "coordinates": [2.325283000000013, 48.860228]
       },
       "properties": {
         "id": 3,
@@ -65,10 +56,7 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [
-          2.3499080000000276,
-          48.852974
-        ]
+        "coordinates": [2.3499080000000276, 48.852974]
       },
       "properties": {
         "id": 4,
@@ -85,10 +73,7 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [
-          2.345022999999969,
-          48.855388
-        ]
+        "coordinates": [2.345022999999969, 48.855388]
       },
       "properties": {
         "id": 5,
@@ -105,10 +90,7 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [
-          0.1247609406709671,
-          47.137919325617354
-        ]
+        "coordinates": [2.122713675074152, 48.806243420027535]
       },
       "properties": {
         "id": 6,
@@ -117,18 +99,15 @@
         "address": "Place d'Armes, 78000 Versailles, France",
         "website": "https://en.chateauversailles.fr/",
         "category": "palace",
-        "lat": 47.137919325617354,
-        "lng": 0.1247609406709671
+        "lat": 48.806243420027535,
+        "lng": 2.122713675074152
       }
     },
     {
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [
-          2.2950457425943114,
-          48.87378333427124
-        ]
+        "coordinates": [2.2950457425943114, 48.87378333427124]
       },
       "properties": {
         "id": 7,
@@ -145,10 +124,7 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [
-          2.345686036914458,
-          48.84629612722662
-        ]
+        "coordinates": [2.345686036914458, 48.84629612722662]
       },
       "properties": {
         "id": 8,
@@ -165,10 +141,7 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [
-          2.315992000000051,
-          48.855832
-        ]
+        "coordinates": [2.315992000000051, 48.855832]
       },
       "properties": {
         "id": 9,
@@ -185,10 +158,7 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [
-          2.311877999999979,
-          48.857037
-        ]
+        "coordinates": [2.311877999999979, 48.857037]
       },
       "properties": {
         "id": 10,
@@ -205,10 +175,7 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [
-          2.3322990718216943,
-          48.87064746894851
-        ]
+        "coordinates": [2.3322990718216943, 48.87064746894851]
       },
       "properties": {
         "id": 11,
@@ -225,10 +192,7 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [
-          2.3138590171103033,
-          48.86637488026445
-        ]
+        "coordinates": [2.3138590171103033, 48.86637488026445]
       },
       "properties": {
         "id": 12,
@@ -245,10 +209,7 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [
-          2.311791283708203,
-          48.86718152871837
-        ]
+        "coordinates": [2.311791283708203, 48.86718152871837]
       },
       "properties": {
         "id": 13,
@@ -265,10 +226,7 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [
-          5.341381379549603,
-          43.35330386635986
-        ]
+        "coordinates": [2.3233268568470162, 48.86392247264266]
       },
       "properties": {
         "id": 14,
@@ -277,18 +235,15 @@
         "address": "Jardin des Tuileries, 75001 Paris, France",
         "website": "https://www.musee-orangerie.fr/en",
         "category": "museum",
-        "lat": 43.35330386635986,
-        "lng": 5.341381379549603
+        "lat": 48.86392247264266,
+        "lng": 2.3233268568470162
       }
     },
     {
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [
-          2.3459609999999884,
-          48.855751
-        ]
+        "coordinates": [2.3459609999999884, 48.855751]
       },
       "properties": {
         "id": 15,
@@ -305,10 +260,7 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [
-          2.321390524462231,
-          48.86552440619377
-        ]
+        "coordinates": [2.321390524462231, 48.86552440619377]
       },
       "properties": {
         "id": 16,
@@ -325,10 +277,7 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [
-          2.3437839109329843,
-          48.86798521265263
-        ]
+        "coordinates": [2.3437839109329843, 48.86798521265263]
       },
       "properties": {
         "id": 17,
@@ -345,10 +294,7 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [
-          2.3434899999999743,
-          48.887107
-        ]
+        "coordinates": [2.3434899999999743, 48.887107]
       },
       "properties": {
         "id": 18,
@@ -365,10 +311,7 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [
-          2.362115000000017,
-          48.859864
-        ]
+        "coordinates": [2.362115000000017, 48.859864]
       },
       "properties": {
         "id": 19,
@@ -385,10 +328,7 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [
-          2.362741450989347,
-          48.85668695459459
-        ]
+        "coordinates": [2.363188734326276, 48.857205820555784]
       },
       "properties": {
         "id": 20,
@@ -397,18 +337,15 @@
         "address": "23 Rue de Sévigné, 75003 Paris, France",
         "website": "https://www.carnavalet.paris.fr/en",
         "category": "museum",
-        "lat": 48.85668695459459,
-        "lng": 2.362741450989347
+        "lat": 48.857205820555784,
+        "lng": 2.363188734326276
       }
     },
     {
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [
-          2.3908199999999624,
-          48.859784
-        ]
+        "coordinates": [2.3908199999999624, 48.859784]
       },
       "properties": {
         "id": 21,
@@ -425,10 +362,7 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [
-          2.3368244393832356,
-          48.864916455405854
-        ]
+        "coordinates": [2.3368244393832356, 48.864916455405854]
       },
       "properties": {
         "id": 22,
@@ -445,10 +379,7 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [
-          2.3609356954693794,
-          48.86421210810125
-        ]
+        "coordinates": [2.3142349145186194, 48.86401945645329]
       },
       "properties": {
         "id": 23,
@@ -457,18 +388,15 @@
         "address": "Pont Alexandre III, 75008 Paris, France",
         "website": "https://en.parisinfo.com/paris-museum-monument/71309/Pont-Alexandre-III",
         "category": "bridge",
-        "lat": 48.86421210810125,
-        "lng": 2.3609356954693794
+        "lat": 48.86401945645329,
+        "lng": 2.3142349145186194
       }
     },
     {
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [
-          2.3655353453505086,
-          48.85562117657676
-        ]
+        "coordinates": [2.3655353453505086, 48.85562117657676]
       },
       "properties": {
         "id": 24,
@@ -485,10 +413,7 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [
-          2.297886999999946,
-          48.860953
-        ]
+        "coordinates": [2.297886999999946, 48.860953]
       },
       "properties": {
         "id": 25,
